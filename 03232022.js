@@ -63,3 +63,58 @@ function high(x) {
 
   return wordMap.get(maxVal);
 }
+
+/* ----------------------------------------------------------------------- */
+
+// Kata: Basic Mathematical Operations
+
+// Your task is to create a function that does four basic mathematical operations.
+
+// The function should take three arguments - operation(string/char), value1(number), value2(number).
+// The function should return result of numbers after applying the chosen operation.
+
+// Examples(Operator, value1, value2) --> output
+// ('+', 4, 7) --> 11
+// ('-', 15, 18) --> -3
+// ('*', 5, 5) --> 25
+// ('/', 49, 7) --> 7
+
+function basicOp(operation, value1, value2) {
+  switch (operation) {
+    case "+":
+      return value1 + value2;
+    case "-":
+      return value1 - value2;
+    case "*":
+      return value1 * value2;
+    case "/":
+      return value1 / value2;
+  }
+}
+
+/* ----------------------------------------------------------------------- */
+
+// Kata: Write Number in Expanded Form
+
+// You will be given a number and you will need to return it as a string in Expanded Form. For example:
+
+// expandedForm(12); // Should return '10 + 2'
+// expandedForm(42); // Should return '40 + 2'
+// expandedForm(70304); // Should return '70000 + 300 + 4'
+// NOTE: All numbers will be whole numbers greater than 0.
+
+function expandedForm(num) {
+  let numDigits = String(num).split(""); // 12 => "12" => ['1', '2']
+  let expanded = [];
+  let remaining = numDigits.length - 1;
+
+  for (let i = 0; i < numDigits.length; i++) {
+    if (numDigits[i] !== "0") {
+      let addition = numDigits[i] + "0".repeat(remaining);
+      expanded.push(addition);
+    }
+    remaining -= 1;
+  }
+
+  return expanded.join(" + ");
+}
