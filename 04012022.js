@@ -1,4 +1,4 @@
-// Day 10
+// Day 12
 //*******************************
 
 // Kata: Count letters in string
