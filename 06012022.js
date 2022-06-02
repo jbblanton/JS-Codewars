@@ -15,9 +15,7 @@ function removeEveryOther(arr) {
   return arr.filter((ele, idx) => idx % 2 === 0);
 }
 
-/* ----------------------------------------------------------------------- */
-
-// Kata: Sum without highest and lowest number
+ Sum without highest and lowest number
 
 // Task
 // Sum all the numbers of a given array ( cq. list ), except the highest and the lowest element ( by value, not by index! ).
